@@ -45,7 +45,7 @@ class UserControllerTest {
 
     @Test
     void givenWrongUserOrPasswordShouldNotExecuteAuthRequiredControllers() {
-        User magnus = new User(1L, "magnus", null, null, null);
+        User magnus = new User(1L, "magnus", null, null, null, null);
         DustResponse dustResponse = testRestTemplate.postForObject("/user/login", magnus, DustResponse.class);
         System.out.println(dustResponse.getMsg());
         System.out.println(dustResponse.getBody());
@@ -54,7 +54,7 @@ class UserControllerTest {
 
     @Test
     void givenRightUserAndPasswordShouldLoginSuccessfullyAndReturnRightSession() {
-        User magnus = new User(1L, "magnus", "magnus", null, null);
+        User magnus = new User(1L, "magnus", "magnus", null,null, null);
         ResponseEntity dustResponse = testRestTemplate.postForEntity("/user/login", magnus, DustResponse.class);
         List<String> strings = dustResponse.getHeaders().get("Set-Cookie");
         System.out.println(JSON.toJSONString(dustResponse));

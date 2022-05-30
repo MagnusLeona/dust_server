@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import per.magnus.dust.business.domain.User;
+import per.magnus.dust.components.service.dict.CookieNameDict;
 
+import javax.servlet.http.Cookie;
 import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -50,5 +52,22 @@ class UserServiceTest {
         User userById = userService.getUserById(id);
         assertNotNull(userById);
         assert Objects.equals(userById.getId(), id);
+    }
+
+    @Test
+    void getUserIfNotLogined() {
+        Cookie cookie = new Cookie(CookieNameDict.COOKIE_LOGIN_TOKEN, null);
+        User currentUser = userService.getCurrentUser(cookie);
+        assert currentUser == null;
+    }
+
+    @Test
+    void checkRegisterName() {
+        User user = new User();
+        user.setName("abc");
+        assert userService.checkUserName(user);
+
+        user.setName("magnus");
+        assert !userService.checkUserName(user);
     }
 }

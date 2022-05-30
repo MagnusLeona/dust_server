@@ -29,6 +29,7 @@ public class UserMissionService {
     public void addMissionToUser(Mission mission, User user) {
         // 新增一个首先需要新增一个任务
         // 然后新增 任务和用户的对应关系 -- 权限为admin
+        mission.setStatus(MissionStatusEnum.MISSION_CREATED.getCode());
         missionService.createMission(mission);
         UserMission userMission = UserMission.newUserMission(user, mission);
         userMissionMapper.insertMissionUserRelations(userMission);
@@ -36,6 +37,10 @@ public class UserMissionService {
 
     public List<Mission> queryMissionForUser(User user) {
         return userMissionMapper.getMissionByUserId(user.getId());
+    }
+
+    public List<Mission> queryArchivedMissionForUser(User user) {
+        return userMissionMapper.getArchivedMissionByUserId(user);
     }
 
     public void updateMissionForUser(Mission mission, User user) {
@@ -46,8 +51,15 @@ public class UserMissionService {
     public void finishMissionForAll(Mission mission, User user) {
         // 用户点击完成任务，修改任务状态为已完成
         // 完成总体任务状态。
-        missionService.finishMission(mission.getId());
-        userMissionMapper.updateUserMissionStatus(mission.getId(), user.getId(), MissionStatusEnum.MISSION_FINISHED.getCode());
+        mission.setStatus(MissionStatusEnum.MISSION_FINISHED.getCode());
+        missionService.updateMissionStatus(mission);
+        userMissionMapper.updateUserMissionStatus(mission, user);
+    }
+
+    public void archiveMissionForAll(Mission mission, User user) {
+        mission.setStatus(MissionStatusEnum.MISSION_ARCHIVED.getCode());
+        missionService.updateMissionStatus(mission);
+        userMissionMapper.updateUserMissionStatus(mission, user);
     }
 
     public void terminateMissionForUser(Mission mission, User user) {

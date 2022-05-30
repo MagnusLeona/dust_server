@@ -7,15 +7,20 @@
         select * from dust_user where id=#{id}
     </select>
 
-    <insert id="insertUser" parameterType="per.magnus.dust.business.domain.User">
-        insert into dust_user(name, password, description) value(#{name}, #{password}, #{description})
+    <insert id="insertUser" parameterType="per.magnus.dust.business.domain.User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into dust_user(name, password, email, description) value(#{name}, #{password}, #{email}, #{description})
     </insert>
 
     <delete id="deleteMissionForUser" parameterType="long">
         delete from dust_user where id=#{id}
     </delete>
 
-    <select id="selectUserByUserIdAndPassword" parameterType="long" resultType="per.magnus.dust.business.domain.User">
-        select id, name, description from dust_user where id=#{id}
+    <select id="selectUserByUserIdAndPassword" parameterType="per.magnus.dust.business.domain.User"
+            resultType="per.magnus.dust.business.domain.User">
+        select id, name, email, description from dust_user where name=#{user.name} and password=#{user.password}
+    </select>
+
+    <select id="selectUserByName" resultType="per.magnus.dust.business.domain.User">
+        select id from dust_user where name=#{name};
     </select>
 </mapper>

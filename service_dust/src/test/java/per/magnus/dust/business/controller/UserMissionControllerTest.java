@@ -10,6 +10,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import per.magnus.dust.business.domain.Mission;
 import per.magnus.dust.business.domain.User;
 import per.magnus.dust.components.web.entity.DustResponse;
 
@@ -26,9 +27,17 @@ class UserMissionControllerTest {
 
     HttpHeaders httpHeaders;
 
+    @Autowired
+    UserMissionController userMissionController;
+
+    User user;
+    Mission mission;
+    Map<String, Object> missionMap = new HashMap();
+
     @BeforeEach
     void setUp() {
-        User magnus = new User(1L, "magnus", "magnus", null, null);
+        User magnus = new User(1L, "magnus", "magnus", null, null, null);
+        missionMap.put("createTime", "2022-03-19 10:10:10");
         ResponseEntity dustResponse = testRestTemplate.postForEntity("/user/login", magnus, DustResponse.class);
         List<String> strings = dustResponse.getHeaders().get("Set-Cookie");
         httpHeaders = new HttpHeaders();
@@ -43,6 +52,11 @@ class UserMissionControllerTest {
         System.out.println(dustResponse);
         assert !Objects.isNull(dustResponse);
         assert dustResponse.getCode() == 200;
+    }
+
+    @Test
+    void testInsert() {
+        DustResponse missionForUser = userMissionController.createMissionForUser(user, missionMap);
     }
 
     @Test

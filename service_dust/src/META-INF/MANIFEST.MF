@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Main-Class: per.magnus.dust.DustMainApplication
+Class-Path: spring-boot-starter-web-2.6.5.jar spring-boot-starter-aop-2.
+ 6.5.jar lombok-1.18.22.jar mybatis-spring-2.0.7.jar spring-context-5.3.
+ 13.jar spring-data-redis-2.5.6.jar spring-data-commons-2.6.0.jar spring
+ -jcl-5.3.13.jar spring-boot-starter-json-2.6.1.jar aspectjweaver-1.9.7.
+ jar snakeyaml-1.29.jar mybatis-3.5.9.jar netty-resolver-4.1.70.Final.ja
+ r spring-boot-starter-tomcat-2.6.1.jar spring-aop-5.3.13.jar slf4j-api-
+ 1.7.36.jar log4j-core-2.17.1.jar spring-context-support-5.3.13.jar spri
+ ng-data-keyvalue-2.6.0.jar tomcat-embed-core-9.0.55.jar spring-boot-2.6
+ .1.jar mysql-connector-java-8.0.28.jar netty-codec-4.1.70.Final.jar tom
+ cat-embed-el-9.0.55.jar spring-boot-starter-jdbc-2.6.1.jar jackson-core
+ -2.13.0.jar druid-spring-boot-starter-1.2.8.jar spring-core-5.3.13.jar 
+ reactor-core-3.4.12.jar fastjson-1.2.80.jar jackson-datatype-jsr310-2.1
+ 3.0.jar spring-boot-starter-2.6.1.jar protobuf-java-3.11.4.jar lettuce-
+ core-6.1.5.RELEASE.jar netty-transport-4.1.70.Final.jar spring-beans-5.
+ 3.13.jar mybatis-typehandlers-jsr310-1.0.2.jar reactive-streams-1.0.3.j
+ ar spring-tx-5.3.13.jar spring-jdbc-5.3.13.jar spring-boot-autoconfigur
+ e-2.6.1.jar jackson-databind-2.13.0.jar log4j-slf4j-impl-2.17.1.jar net
+ ty-common-4.1.70.Final.jar netty-buffer-4.1.70.Final.jar netty-handler-
+ 4.1.70.Final.jar jackson-datatype-jdk8-2.13.0.jar spring-web-5.3.13.jar
+  javax.annotation-api-1.3.2.jar mybatis-spring-boot-starter-2.2.2.jar s
+ pring-expression-5.3.13.jar druid-1.2.8.jar mybatis-spring-boot-autocon
+ figure-2.2.2.jar log4j-api-2.17.1.jar spring-oxm-5.3.13.jar tomcat-embe
+ d-websocket-9.0.55.jar jakarta.annotation-api-1.3.5.jar jackson-annotat
+ ions-2.13.0.jar spring-webmvc-5.3.13.jar HikariCP-4.0.3.jar jackson-mod
+ ule-parameter-names-2.13.0.jar
+

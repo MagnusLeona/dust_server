@@ -12,7 +12,7 @@ public interface MissionMapper {
 
     void deleteMissionById(Long id);
 
-    void updateMissionStatus(Long id, int status);
+    void updateMissionStatus(@Param("mission") Mission mission);
 
     Long selectMissionForUpdate(Long id);
 }

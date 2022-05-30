@@ -32,6 +32,11 @@ public class UserService {
         userMapper.insertUser(user);
     }
 
+    public Boolean checkUserName(User user) {
+        User selectedUser = userMapper.selectUserByName(user.getName());
+        return Objects.isNull(selectedUser);
+    }
+
     public User getUserById(Long id) {
         return userMapper.selectUserById(id);
     }
@@ -63,5 +68,28 @@ public class UserService {
         redisService.set(uuidToken, JSON.toJSONString(loginUser));
         // 需要返回cookie给controller去set
         return new Cookie(CookieNameDict.COOKIE_LOGIN_TOKEN, uuidToken);
+    }
+
+    public Boolean checkLoginStatus(Cookie cookie) {
+        if (!Objects.isNull(cookie.getValue())) {
+            String cookieValue = cookie.getValue();
+            boolean exist = redisService.exist(cookieValue);
+            if (exist) {
+                redisService.flushKey(cookieValue, SessionAttributeConstant.SESSION_MAX_INACTIVE_TIME);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public User getCurrentUser(Cookie cookie) {
+        try {
+            if (!this.checkLoginStatus(cookie)) {
+                return null;
+            }
+            return JSON.parseObject(redisService.get(cookie.getValue()), User.class);
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

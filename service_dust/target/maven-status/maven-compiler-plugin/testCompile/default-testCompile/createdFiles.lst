@@ -1,0 +1,10 @@
+per\magnus\dust\business\controller\MissionControllerTest.class
+per\magnus\dust\business\controller\UserMissionControllerTest.class
+per\magnus\dust\business\controller\UserControllerTest.class
+per\magnus\dust\business\service\UserMissionServiceTest.class
+per\magnus\dust\business\service\UserArticleServiceTest.class
+per\magnus\dust\business\service\MissionServiceTest.class
+per\magnus\dust\business\service\UserServiceTest.class
+per\magnus\dust\business\service\ArticleServiceTest.class
+per\magnus\dust\components\service\utils\FileUtilsTest.class
+per\magnus\dust\business\domain\MissionTest.class

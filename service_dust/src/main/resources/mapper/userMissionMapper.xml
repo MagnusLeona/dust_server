@@ -10,6 +10,8 @@
             wm.id=wum.mission_id
             where
             wum.user_id=#{id}
+            and wm.status &lt; 11
+            order by wm.status asc
     </select>
 
     <resultMap id="missionsByUserId" type="per.magnus.dust.business.domain.Mission">
@@ -24,6 +26,18 @@
             <result property="userStatus" column="user_status" />
         </collection>
     </resultMap>
+    
+    <select id="getArchivedMissionByUserId" parameterType="per.magnus.dust.business.domain.User" resultMap="missionsByUserId">
+        select
+        wm.id, wm.name, wm.status, wm.content,wm.create_time, wm.deadline_time, wum.user_id, wum.mission_id, wum.level, wum.status as user_status
+        from
+        dust_mission wm join dust_user_mission wum
+        on
+        wm.id=wum.mission_id
+        where
+        wum.user_id=#{user.id}
+        and wm.status &gt; 10
+    </select>
 
     <insert id="insertMissionUserRelations" parameterType="per.magnus.dust.business.domain.UserMission">
         insert into dust_user_mission(mission_id, user_id, level, status) value(#{userMission.mission.id}, #{userMission.user.id}, #{userMission.userLevel}, #{userMission.userStatus})
@@ -53,7 +67,7 @@
     </update>
 
     <update id="updateUserMissionStatus">
-        update dust_user_mission set status=#{status} where mission_id=#{missionId} and user_id=#{userId}
+        update dust_user_mission set status=#{mission.status} where mission_id=#{mission.id} and user_id=#{user.id}
     </update>
 
     <delete id="deleteUserById">

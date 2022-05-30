@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import per.magnus.dust.business.domain.Mission;
 import per.magnus.dust.business.domain.User;
-import per.magnus.dust.components.web.exception.DustException;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -67,11 +65,11 @@ class UserMissionServiceTest {
     void givenUpdatedMissionShouldUpdateMissionForValidUser() {
         User user = new User();
         user.setId(1L);
-        Mission missionById = missionService.getMissionById(1L);
+        Mission missionById = missionService.getMissionById(39L);
         missionById.setName("unittest");
         missionById.setContent("unit test content");
         userMissionService.updateMissionForUser(missionById, user);
-        Mission missionById1 = missionService.getMissionById(1L);
+        Mission missionById1 = missionService.getMissionById(39L);
         assert missionById1.getName().equals("unittest");
     }
 
@@ -95,5 +93,19 @@ class UserMissionServiceTest {
         userMissionService.finishMissionForAll(mission, user);
         Mission missionById1 = missionService.getMissionById(mission.getId());
         assert missionById1.getStatus() == 10;
+    }
+
+    @Test
+    void archiveMission() {
+        Mission mission = Mission.createMission(42);
+        User user = new User();
+        user.setId(1L);
+        userMissionService.archiveMissionForAll(mission,user);
+    }
+
+    @Test
+    void getArchivedMission() {
+        List<Mission> missions = userMissionService.queryArchivedMissionForUser(user);
+        System.out.println(missions);
     }
 }

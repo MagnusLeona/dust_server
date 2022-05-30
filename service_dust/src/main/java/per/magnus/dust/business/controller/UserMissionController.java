@@ -1,6 +1,5 @@
 package per.magnus.dust.business.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import per.magnus.dust.business.domain.Mission;
 import per.magnus.dust.business.domain.User;
@@ -12,8 +11,6 @@ import per.magnus.dust.components.web.exception.DustException;
 import per.magnus.dust.components.web.resolver.annotation.InjectUser;
 
 import javax.annotation.Resource;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.List;
 import java.util.Map;
 
@@ -32,9 +29,15 @@ public class UserMissionController {
     @Resource
     MissionService missionService;
 
-    @RequestMapping("/get")
+    @GetMapping("/get")
     public DustResponse queryMissionsForUser(@InjectUser User user) {
         List<Mission> missions = userMissionService.queryMissionForUser(user);
+        return DustResponse.okResponse(missions);
+    }
+
+    @GetMapping("/get/archived")
+    public DustResponse queryArchivedMissionsForUser(@InjectUser User user) {
+        List<Mission> missions = userMissionService.queryArchivedMissionForUser(user);
         return DustResponse.okResponse(missions);
     }
 
@@ -43,8 +46,7 @@ public class UserMissionController {
         // 创建任务
         // 优先插入自己的任务-用户关系，设置level为admin
         // 构建mission
-        LocalDateTime deadLineDate = LocalDateTime.ofEpochSecond((long) missionMap.get("deadLineDate") / 1000L, 0, ZoneOffset.ofHours(8));
-        Mission mission = Mission.createMission((String) missionMap.get("name"), (String) missionMap.get("content"), deadLineDate);
+        Mission mission = Mission.constructNewFromMap(missionMap);
         userMissionService.addMissionToUser(mission, user);
         return DustResponse.okResponse(mission);
     }
@@ -57,11 +59,27 @@ public class UserMissionController {
         return DustResponse.okResponse();
     }
 
+    @PostMapping("/update")
+    public DustResponse updateMission(@InjectUser User user, @RequestBody Map<String, Object> missionMap) {
+        // 不可修改的几个值： id， 创建时间，status状态。
+        Mission mission = Mission.constructFromMap(missionMap);
+        userMissionService.updateMissionForUser(mission, user);
+        return DustResponse.okResponse(mission);
+    }
+
     @PostMapping("/finish/for-all/{id}")
     public DustResponse finishMission(@InjectUser User user, @PathVariable("id") long id) {
         Mission mission = Mission.createMission(id);
         userMissionService.finishMissionForAll(mission, user);
         Mission missionById = missionService.getMissionById(mission.getId());
+        return DustResponse.okResponse(missionById);
+    }
+
+    @PostMapping("/archive/{id}")
+    public DustResponse archiveMission(@InjectUser User user, @PathVariable("id") long id) {
+        // 任务归档
+        Mission missionById = missionService.getMissionById(id);
+        userMissionService.archiveMissionForAll(missionById, user);
         return DustResponse.okResponse(missionById);
     }
 

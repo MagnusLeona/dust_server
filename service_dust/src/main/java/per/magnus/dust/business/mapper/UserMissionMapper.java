@@ -12,11 +12,13 @@ public interface UserMissionMapper {
 
     List<Mission> getMissionByUserId(Long id);
 
+    List<Mission> getArchivedMissionByUserId(@Param("user") User user);
+
     void insertMissionUserRelations(@Param("userMission") UserMission userMission);
 
     void updateUserMission(@Param("mission") Mission mission, @Param("user") User user);
 
-    void updateUserMissionStatus(@Param("missionId") long missionId, @Param("userId") long userId, @Param("status") int status);
+    void updateUserMissionStatus(@Param("mission") Mission mission, @Param("user") User user);
 
     Integer queryUserMissionRole(@Param("missionId") long missionId, @Param("userId") long userId);
 

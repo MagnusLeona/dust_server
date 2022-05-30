@@ -9,7 +9,10 @@ import per.magnus.dust.components.service.enums.mission.MissionStatusEnum;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Data
 @NoArgsConstructor
@@ -54,6 +57,44 @@ public class Mission {
     }
 
     public static Mission createMission(long id) {
-        return new Mission(id, null, null, null, null, null,null);
+        return new Mission(id, null, null, null, null, null, null);
+    }
+
+    public static Mission constructFromMap(Map<String, Object> map) {
+        Mission mission = new Mission();
+        if (map.containsKey("id")) {
+            mission.setId(Long.parseLong(String.valueOf(map.get("id"))));
+        }
+        if (map.containsKey("name")) {
+            mission.setName((String) map.get("name"));
+        }
+        if (map.containsKey("content")) {
+            mission.setContent((String) map.get("content"));
+        }
+        if (map.containsKey("createTime")) {
+            String createTime = (String) map.get("createTime");
+            if (!Objects.isNull(createTime)) {
+                mission.setCreateTime(LocalDateTime.parse(createTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+            }
+        }
+        if (map.containsKey("deadLineTime")) {
+            String deadLineTime = (String) map.get("deadLineTime");
+            mission.setDeadLineTime(LocalDateTime.parse(deadLineTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        }
+        if (map.containsKey("userList")) {
+            // nothing todo
+            mission.setUserList(null);
+        }
+        if (map.containsKey("status")) {
+            mission.setStatus((Integer) map.get("status"));
+        }
+        return mission;
+    }
+
+    public static Mission constructNewFromMap(Map<String, Object> map) {
+        Mission mission = constructFromMap(map);
+        mission.setStatus(MissionStatusEnum.MISSION_CREATED.getCode());
+        mission.setCreateTime(LocalDateTime.now());
+        return mission;
     }
 }

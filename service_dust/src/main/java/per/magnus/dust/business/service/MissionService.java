@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import per.magnus.dust.business.domain.Mission;
 import per.magnus.dust.business.mapper.MissionMapper;
-import per.magnus.dust.components.service.enums.mission.MissionStatusEnum;
 
 @Service
 public class MissionService {
@@ -29,7 +28,12 @@ public class MissionService {
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
-    public void finishMission(Long id) {
-        missionMapper.updateMissionStatus(id, MissionStatusEnum.MISSION_FINISHED.getCode());
+    public void finishMission(Mission mission) {
+        missionMapper.updateMissionStatus(mission);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public void updateMissionStatus(Mission mission) {
+        missionMapper.updateMissionStatus(mission);
     }
 }

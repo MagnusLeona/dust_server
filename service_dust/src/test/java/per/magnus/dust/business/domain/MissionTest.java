@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 class MissionTest {
 
@@ -20,5 +21,11 @@ class MissionTest {
         assert mission.getName().equals("the mission");
         assert mission.getCreateTime().equals(now);
         assert mission.getDeadLineTime().equals(next);
+    }
+
+    @Test
+    void testLocalDateTimeParsing() {
+        String time="2022-05-09 10:32:32";
+        LocalDateTime parse = LocalDateTime.parse(time, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 }

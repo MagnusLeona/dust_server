@@ -14,5 +14,7 @@ public interface UserMapper {
 
     void deleteUserById(Long id);
 
-    User selectUserByUserIdAndPassword(User user);
+    User selectUserByUserIdAndPassword(@Param("user") User user);
+
+    User selectUserByName(String name);
 }

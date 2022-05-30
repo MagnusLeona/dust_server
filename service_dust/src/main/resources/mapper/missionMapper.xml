@@ -7,8 +7,10 @@
         select id, name, content, create_time, status, deadline_time from dust_mission where id=#{id}
     </select>
 
-    <insert id="insertMission" parameterType="per.magnus.dust.business.domain.Mission" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
-        insert into dust_mission(name, content, status,create_time, deadline_time) value(#{name}, #{content}, #{status}, #{createTime}, #{deadLineTime})
+    <insert id="insertMission" parameterType="per.magnus.dust.business.domain.Mission" useGeneratedKeys="true"
+            keyColumn="id" keyProperty="id">
+        insert into dust_mission(name, content, status,create_time, deadline_time) value(#{name}, #{content}, #{status},
+        #{createTime}, #{deadLineTime})
     </insert>
 
     <delete id="deleteMissionById" parameterType="long">
@@ -16,11 +18,11 @@
     </delete>
 
     <select id="selectMissionForUpdate" parameterType="long">
-        select id from dust_mission where id=#{id} for update;
+        select id from dust_mission where id=#{id} for update
     </select>
 
     <update id="updateMissionStatus">
-        update dust_mission set status=#{status} where id=#{id}
+        update dust_mission set status=#{mission.status} where id=#{mission.id}
     </update>
 
     <resultMap type="per.magnus.dust.business.domain.Mission" id="mission">
@@ -32,7 +34,7 @@
     </resultMap>
 
     <resultMap type="per.magnus.dust.business.domain.UserMission" id="userMission">
-        <id column="user_id" property=""/>
+        <id column="user_id" property="id"/>
         <result column="name" property="name"/>
         <result column="content" property="content"/>
         <result column="create_time" property="createTime"/>

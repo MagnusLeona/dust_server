@@ -12,12 +12,14 @@ import java.util.List;
 public class User {
     Long id;
     String name;
+    String email;
     String password;
     String description;
     List<Mission> missionList;
 
     /**
      * 给用户添加任务
+     *
      * @param mission
      */
     public void addMission(Mission mission) {
