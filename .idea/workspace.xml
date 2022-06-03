@@ -5,101 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3ff46ac-cc14-4d63-b2d7-ad698e09e3b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/UserArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/ArticleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/TagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserArticleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/enums/article/ArticleAuthEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/utils/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/web/exception/ext/UserArticleException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/articleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/tagMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userArticleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/domain/ArticleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/ArticleServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserArticleServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/components/service/utils/FileUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserMissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserMissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/Mission.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/Mission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/MissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/MissionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserMissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserMissionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/MissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/MissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserMissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserMissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/constant/SessionAttributeConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/constant/SessionAttributeConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/enums/ExceptionCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/enums/ExceptionCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/enums/mission/MissionStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/enums/mission/MissionStatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/utils/WebUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/mapper/UserArticleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/components/service/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/missionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/missionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userMissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userMissionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/controller/UserMissionControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/controller/UserMissionControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/domain/MissionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/domain/MissionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserMissionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserMissionServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/missionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/userMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/userMissionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/DustMainApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/MissionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/UserMissionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/Mission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/UserMission.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/MissionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/UserMissionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/MissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/UserMissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/repos/mysql/DustDataSourceConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/repos/redis/DustRedisConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/repos/redis/RedisService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/constant/SessionAttributeConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/dict/CookieNameDict.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/dict/ExceptionMessageDict.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/ExceptionCodeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/ResponseStatusEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/SessionAttributeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/mission/MissionAuthEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/mission/MissionLevelEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/mission/MissionStatusEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/utils/WebUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/aspect/AuthCheckAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/aspect/LoggerAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/aspect/annotation/LoginCheckRequired.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/config/DustWebConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/entity/DustResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/exception/DustException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/exception/ext/ArgumentResolverException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/exception/ext/AuthCheckException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/handler/DustExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/interceptor/LoginCheckInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/resolver/DustUserArgumentResolver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/resolver/annotation/InjectUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/properties/datasource.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/static/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/controller/MissionControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/controller/UserControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/controller/UserMissionControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/domain/MissionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/MissionServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/UserMissionServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/UserServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/mapper/userArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/main/resources/properties/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/main/resources/properties/datasource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserArticleServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service_dust/src/test/java/per/magnus/dust/business/service/UserArticleServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/articleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/tagMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/mapper/userArticleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/ArticleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/TagController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/controller/UserArticleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/UserArticle$UserArticleBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/domain/UserArticle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/ArticleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/TagMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/mapper/UserArticleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/ArticleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/TagService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/business/service/UserArticleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/enums/article/ArticleAuthEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/service/utils/FileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/classes/per/magnus/dust/components/web/exception/ext/UserArticleException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/service_dust-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/service_dust-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/domain/ArticleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/ArticleServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/TagServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/business/service/UserArticleServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_dust/target/test-classes/per/magnus/dust/components/service/utils/FileUtilsTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,22 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArticleServiceTest.getArticleById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service_dust" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="per.magnus.dust.business.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="per.magnus.dust.business.service" />
-      <option name="MAIN_CLASS_NAME" value="per.magnus.dust.business.service.ArticleServiceTest" />
-      <option name="METHOD_NAME" value="getArticleById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ArticleServiceTest.getArticleDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service_dust" />
       <extension name="coverage">
@@ -212,6 +145,22 @@
       <option name="PACKAGE_NAME" value="per.magnus.dust.business.service" />
       <option name="MAIN_CLASS_NAME" value="per.magnus.dust.business.service.ArticleServiceTest" />
       <option name="METHOD_NAME" value="getArticleDetail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserArticleServiceTest.getMarked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service_dust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="per.magnus.dust.business.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="per.magnus.dust.business.service" />
+      <option name="MAIN_CLASS_NAME" value="per.magnus.dust.business.service.UserArticleServiceTest" />
+      <option name="METHOD_NAME" value="getMarked" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -310,18 +259,18 @@
       <item itemvalue="Application.service_dust" />
       <item itemvalue="JUnit.UserArticleServiceTest.likeArticle" />
       <item itemvalue="JUnit.UserArticleServiceTest.ifFanned" />
-      <item itemvalue="JUnit.ArticleServiceTest.getArticleById" />
       <item itemvalue="JUnit.ArticleServiceTest.getArticleDetail" />
       <item itemvalue="Maven.service_dust [package]" />
       <item itemvalue="JUnit.UserServiceTest.checkRegisterName" />
+      <item itemvalue="JUnit.UserArticleServiceTest.getMarked" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserArticleServiceTest.getMarked" />
         <item itemvalue="JUnit.UserServiceTest.checkRegisterName" />
         <item itemvalue="JUnit.UserArticleServiceTest.ifFanned" />
         <item itemvalue="JUnit.UserArticleServiceTest.likeArticle" />
         <item itemvalue="JUnit.ArticleServiceTest.getArticleDetail" />
-        <item itemvalue="JUnit.ArticleServiceTest.getArticleById" />
       </list>
     </recent_temporary>
   </component>
@@ -432,6 +381,20 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/controller/UserArticleController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service_dust/src/main/java/per/magnus/dust/business/service/UserArticleService.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((StandardSessionFacade)session).session" custom="org.apache.catalina.session.StandardSessionFacade" />

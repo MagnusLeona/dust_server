@@ -1,0 +1,17 @@
+2022-05-31 09:47:02.624 [INFO ] org.springframework.boot.StartupInfoLogger.logStarting[55 line]  [SerialNo: ] [message]   - Starting DustMainApplication using Java 16.0.1 on DESKTOP-6CRG7QP with PID 25508 (C:\Magnus\workspace\workey\service_dust\target\classes started by Magnus in C:\Magnus\workspace\workey)
+2022-05-31 09:47:02.655 [INFO ] org.springframework.boot.SpringApplication.logStartupProfileInfo[635 line]  [SerialNo: ] [message]   - No active profile set, falling back to default profiles: default
+2022-05-31 09:47:03.698 [INFO ] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected[262 line]  [SerialNo: ] [message]   - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-31 09:47:03.722 [INFO ] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn[132 line]  [SerialNo: ] [message]   - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-31 09:47:03.792 [INFO ] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn[201 line]  [SerialNo: ] [message]   - Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
+2022-05-31 09:47:05.183 [INFO ] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize[108 line]  [SerialNo: ] [message]   - Tomcat initialized with port(s): 8090 (http)
+2022-05-31 09:47:05.374 [INFO ] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext[290 line]  [SerialNo: ] [message]   - Root WebApplicationContext: initialization completed in 2657 ms
+2022-05-31 09:47:07.720 [INFO ] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start[220 line]  [SerialNo: ] [message]   - Tomcat started on port(s): 8090 (http) with context path '/dust'
+2022-05-31 09:47:07.736 [INFO ] org.springframework.boot.StartupInfoLogger.logStarted[61 line]  [SerialNo: ] [message]   - Started DustMainApplication in 5.67 seconds (JVM running for 6.892)
+2022-05-31 09:47:55.144 [INFO ] org.springframework.web.servlet.FrameworkServlet.initServletBean[525 line]  [SerialNo: ] [message]   - Initializing Servlet 'dispatcherServlet'
+2022-05-31 09:47:55.144 [INFO ] org.springframework.web.servlet.FrameworkServlet.initServletBean[547 line]  [SerialNo: ] [message]   - Completed initialization in 0 ms
+2022-05-31 09:47:55.348 [INFO ] per.magnus.dust.components.web.aspect.LoggerAspect.aroundLogger[33 line]  [SerialNo: 123] [message]   - [uri: userLogin] transaction start | 
+2022-05-31 09:47:55.976 [INFO ] per.magnus.dust.components.web.aspect.LoggerAspect.aroundLogger[39 line]  [SerialNo: 123] [message]   - [uri: userLogin] transaction end on error | 
+2022-05-31 09:50:19.972 [INFO ] com.alibaba.druid.pool.DruidDataSource.init[998 line]  [SerialNo: 123] [message]   - {dataSource-1} inited
+2022-05-31 09:50:20.059 [INFO ] com.alibaba.druid.pool.DruidAbstractDataSource.setFailContinuous[1804 line]  [SerialNo: ] [message]   - {dataSource-1} failContinuous is true
+2022-05-31 09:51:07.441 [INFO ] com.alibaba.druid.pool.DruidDataSource.close[2071 line]  [SerialNo: ] [message]   - {dataSource-1} closing ...
+2022-05-31 09:51:07.441 [INFO ] com.alibaba.druid.pool.DruidDataSource.close[2144 line]  [SerialNo: ] [message]   - {dataSource-1} closed

@@ -25,7 +25,7 @@ public class FileUtils {
     public static void saveFile(String name, String fileContent) throws IOException {
         // 将文件写入本地
         // 保存为markdown格式
-        Files.writeString(Paths.get("C:\\Magnus\\articles\\" + name), fileContent);
+        Files.writeString(Paths.get(name), fileContent);
         // ok
     }
 }

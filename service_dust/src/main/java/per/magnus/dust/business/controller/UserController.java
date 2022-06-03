@@ -39,7 +39,7 @@ public class UserController {
     public DustResponse register(@RequestBody User user) {
         // 注册
         userService.createUser(user);
-        return DustResponse.okResponse();
+        return DustResponse.okResponse(user);
     }
 
     @RequestMapping("/check-name")

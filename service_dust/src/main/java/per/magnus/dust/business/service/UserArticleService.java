@@ -110,4 +110,8 @@ public class UserArticleService {
         UserArticle userArticle = userArticleMapper.queryIfFanned(user, article);
         return !Objects.isNull(userArticle) && userArticle.getFan();
     }
+
+    public List<Article> queryMarkedArticles(User user) {
+        return userArticleMapper.queryMarkedArticles(user);
+    }
 }

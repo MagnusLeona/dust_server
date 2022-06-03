@@ -24,4 +24,6 @@ public interface UserArticleMapper {
     void deleteUserArticle(@Param("userArticle") UserArticle userArticle);
 
     void updateUserArticleMark(@Param("userArticle") UserArticle userArticle);
+
+    List<Article> queryMarkedArticles(@Param("user") User user);
 }

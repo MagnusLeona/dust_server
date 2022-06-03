@@ -1,6 +1,5 @@
 package per.magnus.dust.business.controller;
 
-import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 import per.magnus.dust.business.domain.Article;
 import per.magnus.dust.business.domain.User;
@@ -40,6 +39,12 @@ public class UserArticleController {
     public DustResponse getArticleByUser(@InjectUser User user) {
         // 返回用户创建的文章
         List<Article> articles = userArticleService.queryArticlesForUser(user);
+        return DustResponse.okResponse(articles);
+    }
+
+    @GetMapping("/marked/get")
+    public DustResponse getMarkedArticles(@InjectUser User user) {
+        List<Article> articles = userArticleService.queryMarkedArticles(user);
         return DustResponse.okResponse(articles);
     }
 

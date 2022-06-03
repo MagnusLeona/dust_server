@@ -2,6 +2,7 @@ package per.magnus.dust.business.service;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,9 @@ import java.util.Objects;
 
 @Service
 public class ArticleService {
+
+    @Value("${dust.upload.file.path}")
+    String path;
 
     @Resource
     ArticleMapper articleMapper;
@@ -54,7 +58,7 @@ public class ArticleService {
         // 在同一个事务中，不允许同时出现两个类型的ExecutorType
         // 所以批量插入tag只能另开事务执行
         articleService.insertArticleTag(article);
-        FileUtils.saveFile(article.getSavedFileName(), article.getContent());
+        FileUtils.saveFile(path + article.getSavedFileName(), article.getContent());
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = Exception.class)
@@ -72,7 +76,7 @@ public class ArticleService {
         if (Objects.isNull(articleById)) {
             throw UserArticleException.nullParameterException();
         }
-        articleById.setContent(FileUtils.readFileAsString("C:\\Magnus\\articles\\" + articleById.getSavedFileName()));
+        articleById.setContent(FileUtils.readFileAsString(path + articleById.getSavedFileName()));
         UserArticle userArticle = userArticleService.queryUserArticle(user, articleById);
         userArticle.setArticle(articleById);
         userArticle.setUser(user);

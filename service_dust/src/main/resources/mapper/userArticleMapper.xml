@@ -47,4 +47,9 @@
     <update id="updateUserArticleMark">
         update dust_user_article set marked=#{userArticle.marked} where id=#{userArticle.id}
     </update>
+
+    <select id="queryMarkedArticles" resultMap="articlesForUser">
+        select da.id, da.name, da.description, da.update_time from dust_article da, dust_user_article dua where
+        dua.user_id=#{user.id} and dua.marked=1 and dua.article_id=da.id;
+    </select>
 </mapper>

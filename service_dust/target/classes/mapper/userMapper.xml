@@ -1,0 +1,26 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="per.magnus.dust.business.mapper.UserMapper">
+    <select id="selectUserById" parameterType="long" resultType="per.magnus.dust.business.domain.User">
+        select * from dust_user where id=#{id}
+    </select>
+
+    <insert id="insertUser" parameterType="per.magnus.dust.business.domain.User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into dust_user(name, password, email, description) value(#{name}, #{password}, #{email}, #{description})
+    </insert>
+
+    <delete id="deleteMissionForUser" parameterType="long">
+        delete from dust_user where id=#{id}
+    </delete>
+
+    <select id="selectUserByUserIdAndPassword" parameterType="per.magnus.dust.business.domain.User"
+            resultType="per.magnus.dust.business.domain.User">
+        select id, name, email, description from dust_user where name=#{user.name} and password=#{user.password}
+    </select>
+
+    <select id="selectUserByName" resultType="per.magnus.dust.business.domain.User">
+        select id from dust_user where name=#{name};
+    </select>
+</mapper>

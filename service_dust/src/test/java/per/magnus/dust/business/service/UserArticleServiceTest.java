@@ -84,4 +84,12 @@ class UserArticleServiceTest {
         assert !userArticleService.queryIfFanned(user, article);
     }
 
+    @Test
+    void getMarked() {
+        user.setId(1L);
+        List<Article> articles = userArticleService.queryMarkedArticles(user);
+        System.out.println(articles);
+        assert articles != null && !articles.isEmpty();
+    }
+
 }
