@@ -16,13 +16,13 @@ public class DustExceptionHandler {
 
     @ExceptionHandler(AuthCheckException.class)
     public DustResponse loginExceptionHandler(AuthCheckException e, HttpServletRequest httpServletRequest) {
-        e.printStackTrace();
+        log.error(e.getMessage());
         return DustResponse.definedError(e.getCode(), e.getMessage(), null);
     }
 
     @ExceptionHandler(Exception.class)
     public DustResponse defaultExceptionHandler(Exception e) {
-        e.printStackTrace();
+        log.error(e.getMessage());
         return DustResponse.definedError(ResponseStatusEnum.STATUS_UNKONWN_ERROR.code(), e.getMessage(), null);
     }
 }

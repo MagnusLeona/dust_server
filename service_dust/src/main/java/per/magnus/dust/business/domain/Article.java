@@ -20,6 +20,7 @@ public class Article {
     public String name;
     public String description;
     public String fileName;
+    public Integer fileType;
     public String content;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public LocalDateTime updateTime;
@@ -40,6 +41,9 @@ public class Article {
         }
         if (map.containsKey("fileName")) {
             article.setFileName((String) map.get("fileName"));
+        }
+        if (map.containsKey("fileType")) {
+            article.setFileType((Integer) map.get("fileType"));
         }
         if (map.containsKey("content")) {
             article.setContent((String) map.get("content"));

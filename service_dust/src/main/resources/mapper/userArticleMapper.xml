@@ -19,6 +19,7 @@
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="description" column="description"/>
+        <result property="fileType" column="file_type" />
         <result property="updateTime" column="update_time" javaType="java.time.LocalDateTime"/>
         <collection property="tagList" column="id" ofType="per.magnus.dust.business.domain.Tag" select="selectForTag"/>
     </resultMap>

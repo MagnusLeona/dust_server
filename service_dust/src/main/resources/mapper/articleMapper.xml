@@ -4,7 +4,7 @@
 
 <mapper namespace="per.magnus.dust.business.mapper.ArticleMapper">
     <select id="getArticleById" resultType="per.magnus.dust.business.domain.Article" resultMap="article">
-        select id, name, description, file_name, update_time from dust_article where id=#{article.id} order by update_time desc;
+        select id, name, description, file_name, update_time, file_type from dust_article where id=#{article.id} order by update_time desc;
     </select>
 
     <resultMap id="article" type="per.magnus.dust.business.domain.Article">
@@ -12,6 +12,7 @@
         <result javaType="java.lang.String" column="name" property="name"/>
         <result javaType="java.lang.String" column="description" property="description"/>
         <result javaType="java.lang.String" column="file_name" property="fileName"/>
+        <result javaType="java.lang.Integer" column="file_type" property="fileType" />
         <result javaType="java.time.LocalDateTime" column="update_time" property="updateTime" />
         <association property="author" column="id" select="selectForAuthor"/>
         <collection property="tagList" column="id" ofType="per.magnus.dust.business.domain.Tag" select="selectForTag"/>
@@ -19,8 +20,8 @@
 
     <insert id="insertArticle" parameterType="per.magnus.dust.business.domain.Article" useGeneratedKeys="true"
             keyColumn="id" keyProperty="id">
-        insert into dust_article(name, description, file_name, update_time) value(#{article.name}, #{article.description},
-        #{article.fileName}, #{article.updateTime})
+        insert into dust_article(name, description, file_name, update_time, file_type) value(#{article.name}, #{article.description},
+        #{article.fileName}, #{article.updateTime}, #{article.fileType})
     </insert>
 
     <insert id="saveArticleTags">

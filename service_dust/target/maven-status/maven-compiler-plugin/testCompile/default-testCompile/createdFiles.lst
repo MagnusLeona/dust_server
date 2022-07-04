@@ -1,0 +1,5 @@
+per\magnus\dust\business\service\TagServiceTest.class
+per\magnus\dust\components\service\utils\FileUtilsTest.class
+per\magnus\dust\business\domain\ArticleTest.class
+per\magnus\dust\business\service\UserArticleServiceTest.class
+per\magnus\dust\business\service\ArticleServiceTest.class
